@@ -12,7 +12,9 @@ class FurnaceData:
         self.measured_at = datetime.now()
 
     def __str__(self):
-        return f'Measuring time: {self.measured_at}\tT: {self.temperature}\tWSP: {self.working_set_point}'
+        return f'Measuring time: {self.measured_at}\t' \
+               f'T: {self.temperature}\t' \
+               f'WSP: {self.working_set_point}'
 
 
 class FurnaceIO:
