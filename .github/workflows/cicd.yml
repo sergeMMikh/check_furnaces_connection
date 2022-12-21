@@ -29,4 +29,7 @@ jobs:
       - name: Linting main
         run: flake8 main.py
 
+      - name: Linting classes
+        run: flake8 classes
+
 
