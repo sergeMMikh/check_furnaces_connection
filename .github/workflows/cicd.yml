@@ -32,7 +32,7 @@ jobs:
       - name: Linting classes
         run: flake8 classes
 
-      - name: Linting classes
+      - name: Linting models
         run: flake8 models
 
 
