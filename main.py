@@ -1,7 +1,11 @@
 from classes.furnace_io import FurnaceIO
+from models.furnace_models import Base
+from models.session import engine
 
 
 def main():
+    Base.metadata.create_all(engine)
+
     furnace = FurnaceIO(ip='192.168.1.250',
                         port='9003')
 

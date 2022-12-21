@@ -1,7 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy import ForeignKey, func
-# from sqlalchemy.dialects.postgresql import UUID
-# from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -18,6 +16,7 @@ class FurnaceIO(Base):
 
 
 class FurnaceHistory(Base):
+    __tablename__ = "measurements"
     id = Column(Integer, primary_key=True)
     furnace_id = Column(Integer, ForeignKey("furnace.id", ondelete="CASCADE"))
     temperature = Column(Integer)
